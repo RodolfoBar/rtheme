@@ -15,12 +15,12 @@ function M.setup()
         lgreen      = '#82ed7b',
         yellow      = '#ff9a46',
         lyellow     = '#ffd155',
-        blue        = '#82a8ff',
-        lblue       = '#99c3ff',
+        blue        = '#77a8ff',
+        lblue       = '#81d8ff',
         purple      = '#b582ff',
         lpurple     = '#da7fff',
-        cyan        = '#33faba',
-        lcyan       = '#8ffacf',
+        cyan        = '#33fad5',
+        lcyan       = '#99ffde',
         white       = '#32343A',
         lwhite      = '#b3b7c1',
     }
@@ -33,7 +33,7 @@ function M.setup()
         Identifier      = { fg = colors.fg },
         String          = { fg = colors.lgreen },
         Statement       = { fg = colors.purple },
-        Constant        = { fg = colors.yellow },
+        Constant        = { fg = colors.lcyan },
         Operator        = { fg = colors.fg },
         Delimiter       = { fg = colors.fg },
         Type            = { fg = colors.fg },
@@ -50,7 +50,7 @@ function M.setup()
 
         -- Treesitter support
         ["@variable"]                   = { fg = colors.fg },
-        ["@variable.parameter"]         = { fg = colors.lcyan },
+        ["@variable.parameter"]         = { fg = colors.yellow },
         -- ["@type"]                       = { fg = colors.cyan },
         -- ["@type.builtin"]               = { fg = colors.cyan },
 
