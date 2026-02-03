@@ -51,16 +51,18 @@ function M.setup()
 
 
         -- Treesitter support
-        ["@variable"]   = { fg = colors.fg },
-        ["@variable.parameter"] = { fg = colors.orange },
+        ["@variable"]                   = { fg = colors.fg },
+        ["@variable.parameter"]         = { fg = colors.orange },
+        -- ["@type"]                       = { fg = colors.cyan },
+        -- ["@type.builtin"]               = { fg = colors.cyan },
 
         -- Treesitter Markdown support
-        ["@markup.heading.1.markdown"] = { fg = colors.blue, bold = true, },
-        ["@markup.heading.2.markdown"] = { fg = colors.orange, bold = true, },
-        ["@markup.heading.3.markdown"] = { fg = colors.purple, bold = true, },
-        ["@markup.heading.4.markdown"] = { fg = colors.red, bold = true, },
-        ["@markup.heading.5.markdown"] = { fg = colors.cyan, bold = true, },
-        ["@markup.heading.6.markdown"] = { fg = colors.green, bold = true, },
+        ["@markup.heading.1.markdown"]  = { fg = colors.blue, bold = true, },
+        ["@markup.heading.2.markdown"]  = { fg = colors.orange, bold = true, },
+        ["@markup.heading.3.markdown"]  = { fg = colors.purple, bold = true, },
+        ["@markup.heading.4.markdown"]  = { fg = colors.red, bold = true, },
+        ["@markup.heading.5.markdown"]  = { fg = colors.cyan, bold = true, },
+        ["@markup.heading.6.markdown"]  = { fg = colors.green, bold = true, },
 
         -- Todo support
         -- NOTE: THING
