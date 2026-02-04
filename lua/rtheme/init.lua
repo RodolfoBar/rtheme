@@ -7,8 +7,8 @@ function M.setup()
     local colors = {
         fg          = '#bfc5d2',
         bg          = '#000000',
-        black       = '#131313',
-        lblack      = '#181a1d',
+        black       = '#1a1b1d',
+        lblack      = '#242527',
         red         = '#ff3551',
         lred        = '#ff5f7c',
         green       = '#4be451',
@@ -21,7 +21,7 @@ function M.setup()
         lpurple     = '#da7fff',
         cyan        = '#33fad5',
         lcyan       = '#99ffde',
-        white       = '#32343A',
+        white       = '#4c4e53',
         lwhite      = '#b3b7c1',
     }
 
