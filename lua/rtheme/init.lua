@@ -7,8 +7,8 @@ function M.setup()
     local colors = {
         fg          = '#b2c1d1',
         bg          = '#000000',
-        black       = '#1b202c',
-        lblack      = '#2c2e3e',
+        black       = '#181c26',
+        lblack      = '#262836',
         red         = '#d64f61',
         lred        = '#f87591',
         green       = '#54c266',
@@ -17,8 +17,8 @@ function M.setup()
         lyellow     = '#fbda73',
         blue        = '#667cf1',
         lblue       = '#8fa8f8',
-        purple      = '#a086f0',
-        lpurple     = '#c18de8',
+        purple      = '#aa8eff',
+        lpurple     = '#ca94f3',
         cyan        = '#44b079',
         lcyan       = '#48cb9f',
         white       = '#424559',
@@ -95,16 +95,16 @@ function M.setup()
         TodoFgTEST      = { fg = colors.lwhite, italic = true },
         TodoSignTEST    = { fg = colors.lwhite, italic = true },
 
-        -- LSP Support
-        DiagnosticVirtualTextWarn = { fg = colors.lyellow, bold = true },
-        DiagnosticVirtualLinesWarn = { fg = colors.lyellow, bold = true },
-        DiagnosticSignWarn = { fg = colors.lyellow },
-        DiagnosticVirtualTextError = { fg = colors.red, bold = true },
-        DiagnosticVirtualLinesError = { fg = colors.red, bold = true },
-        DiagnosticSignError = { fg = colors.red },
-        DiagnosticVirtualTextHint = { fg = colors.lcyan, bold = true },
-        DiagnosticVirtualLinesHint = { fg = colors.lcyan, bold = true },
-        DiagnosticSignHint = {fg = colors.lcyan },
+        -- Diagnostics Support
+        DiagnosticError = { fg = colors.red, bold = true },
+        DiagnosticWarn  = { fg = colors.lyellow, bold = true },
+        DiagnosticHint  = { fg = colors.lcyan, bold = true },
+        DiagnosticInfo  = { fg = colors.lblue, bold = true },
+
+        -- Gitsigns support
+        GitsignsAdd     = { fg = colors.lgreen },
+        GitsignsChange  = { fg = colors.lblue },
+        GitsignsDelete  = { fg = colors.lred },
     }
 
     for group, opts in pairs(highlights) do
