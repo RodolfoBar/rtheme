@@ -5,9 +5,9 @@ function M.setup()
     vim.cmd('syntax reset')
 
     local colors = {
-        fg          = '#a0b8d1',
+        fg          = '#b2c1d1',
         bg          = '#000000',
-        black       = '#171b25',
+        black       = '#1b202c',
         lblack      = '#2c2e3e',
         red         = '#d64f61',
         lred        = '#f87591',
@@ -21,8 +21,8 @@ function M.setup()
         lpurple     = '#c18de8',
         cyan        = '#44b079',
         lcyan       = '#48cb9f',
-        white       = '#425059',
-        lwhite      = '#66767d',
+        white       = '#424559',
+        lwhite      = '#66667d',
     }
 
     local highlights = {
@@ -33,10 +33,10 @@ function M.setup()
         Identifier      = { fg = colors.fg },
         String          = { fg = colors.lgreen },
         Statement       = { fg = colors.purple },
-        Constant        = { fg = colors.lcyan },
-        Operator        = { fg = colors.fg },
-        Delimiter       = { fg = colors.fg },
-        Type            = { fg = colors.lpurple },
+        Constant        = { fg = colors.yellow },
+        Operator        = { fg = colors.lblue },
+        Delimiter       = { fg = colors.lblue },
+        Type            = { fg = colors.blue },
         Special         = { fg = colors.fg },
         Variable        = { fg = colors.fg },
         CursorLine      = { bg = colors.black },
@@ -50,8 +50,9 @@ function M.setup()
 
         -- Treesitter support
         ["@variable"]                   = { fg = colors.fg },
-        ["@variable.parameter"]         = { fg = colors.yellow },
-        ["@type.builtin"]               = { fg = colors.lpurple },
+        ["@variable.parameter"]         = { fg = colors.lpurple },
+        ["@type.builtin"]               = { fg = colors.blue },
+        ["@constructor"]                = { fg = colors.lblue },
         -- ["@type"]                       = { fg = colors.cyan },
         -- ["@type.builtin"]               = { fg = colors.cyan },
 
@@ -72,9 +73,9 @@ function M.setup()
         -- PERF: THING
         -- TEST: THING
 
-        TodoBgNOTE      = { bg = colors.blue, fg = colors.bg, bold = true, italic = true },
-        TodoFgNOTE      = { fg = colors.blue, italic = true },
-        TodoSignNOTE    = { fg = colors.blue, italic = true },
+        TodoBgNOTE      = { bg = colors.lblue, fg = colors.bg, bold = true, italic = true },
+        TodoFgNOTE      = { fg = colors.lblue, italic = true },
+        TodoSignNOTE    = { fg = colors.lblue, italic = true },
         TodoBgTODO      = { bg = colors.lcyan, fg = colors.bg, bold = true, italic = true },
         TodoFgTODO      = { fg = colors.lcyan, italic = true },
         TodoSignTODO    = { fg = colors.lcyan, italic = true },
@@ -93,6 +94,17 @@ function M.setup()
         TodoBgTEST      = { bg = colors.lwhite, fg = colors.bg, bold = true, italic = true },
         TodoFgTEST      = { fg = colors.lwhite, italic = true },
         TodoSignTEST    = { fg = colors.lwhite, italic = true },
+
+        -- LSP Support
+        DiagnosticVirtualTextWarn = { fg = colors.lyellow, bold = true },
+        DiagnosticVirtualLinesWarn = { fg = colors.lyellow, bold = true },
+        DiagnosticSignWarn = { fg = colors.lyellow },
+        DiagnosticVirtualTextError = { fg = colors.red, bold = true },
+        DiagnosticVirtualLinesError = { fg = colors.red, bold = true },
+        DiagnosticSignError = { fg = colors.red },
+        DiagnosticVirtualTextHint = { fg = colors.lcyan, bold = true },
+        DiagnosticVirtualLinesHint = { fg = colors.lcyan, bold = true },
+        DiagnosticSignHint = {fg = colors.lcyan },
     }
 
     for group, opts in pairs(highlights) do
