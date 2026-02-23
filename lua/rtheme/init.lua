@@ -64,6 +64,8 @@ function M.setup()
         ["@markup.heading.5.markdown"]  = { fg = colors.green, bold = true, },
         ["@markup.heading.6.markdown"]  = { fg = colors.red, bold = true, },
 
+        ["@markup.list.markdown"] = { fg = colors.yellow },
+
         -- Todo support
         -- NOTE: THING
         -- TODO: THING
