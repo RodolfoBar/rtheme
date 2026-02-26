@@ -1,1 +1,2 @@
-require("rtheme").setup()
+local rtheme = require('rtheme')
+rtheme.setup(rtheme.config)

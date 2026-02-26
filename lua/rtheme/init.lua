@@ -1,29 +1,41 @@
 local M = {}
 
-function M.setup()
+local defaults = {
+    transparency = false
+}
+
+M.config = {}
+
+function M.setup(opts)
     vim.cmd('highlight clear')
     vim.cmd('syntax reset')
 
     local colors = {
-        fg          = '#b2c1d1',
-        bg          = '#000000',
-        black       = '#181c26',
-        lblack      = '#262836',
-        red         = '#d64f61',
-        lred        = '#f87591',
-        green       = '#54c266',
-        lgreen      = '#87dc79',
-        yellow      = '#ef963f',
-        lyellow     = '#fbda73',
-        blue        = '#667cf1',
-        lblue       = '#8fa8f8',
-        purple      = '#aa8eff',
-        lpurple     = '#ca94f3',
-        cyan        = '#44b079',
-        lcyan       = '#48cb9f',
-        white       = '#424559',
-        lwhite      = '#66667d',
+        fg          = '#e8e7ff',
+        bg          = '#15131a',
+        black       = '#2d2241',
+        lblack      = '#403458',
+        red         = '#ff5d8a',
+        lred        = '#ff8aac',
+        green       = '#a6ff65',
+        lgreen      = '#b9ff91',
+        yellow      = '#ff9754',
+        lyellow     = '#ffd780',
+        blue        = '#43d1ff',
+        lblue       = '#86e8ff',
+        purple      = '#ca8eff',
+        lpurple     = '#f4bfff',
+        cyan        = '#00ffb2',
+        lcyan       = '#4cffe1',
+        white       = '#7b6fb7',
+        lwhite      = '#b2afeb',
     }
+
+    M.config = vim.tbl_deep_extend("force", {}, defaults, opts or {})
+
+    if M.config.transparency then
+        colors.bg = "#000000"
+    end
 
     local highlights = {
         Normal          = { fg = colors.fg, bg = colors.bg },
