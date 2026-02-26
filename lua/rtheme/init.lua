@@ -34,7 +34,7 @@ function M.setup(opts)
     M.config = vim.tbl_deep_extend("force", {}, defaults, opts or {})
 
     if M.config.transparency then
-        colors.bg = "#000000"
+        colors.bg = "none"
     end
 
     local highlights = {
