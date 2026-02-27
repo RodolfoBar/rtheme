@@ -12,23 +12,23 @@ function M.setup(opts)
 
     local colors = {
         fg          = '#e8e7ff',
-        bg          = '#15131a',
-        black       = '#2d2241',
-        lblack      = '#403458',
+        bg          = '#110f15',
+        black       = '#272133',
+        lblack      = '#382f4a',
         red         = '#ff5d8a',
         lred        = '#ff8aac',
         green       = '#a6ff65',
         lgreen      = '#b9ff91',
-        yellow      = '#ff9754',
-        lyellow     = '#ffd780',
+        yellow      = '#ffa770',
+        lyellow     = '#ffd986',
         blue        = '#43d1ff',
         lblue       = '#86e8ff',
-        purple      = '#ca8eff',
-        lpurple     = '#f4bfff',
+        purple      = '#a970ff',
+        lpurple     = '#fb97ff',
         cyan        = '#00ffb2',
         lcyan       = '#4cffe1',
-        white       = '#7b6fb7',
-        lwhite      = '#b2afeb',
+        white       = '#645d87',
+        lwhite      = '#9e9cc0',
     }
 
     M.config = vim.tbl_deep_extend("force", {}, defaults, opts or {})
@@ -110,10 +110,10 @@ function M.setup(opts)
         TodoSignTEST    = { fg = colors.lwhite, italic = true },
 
         -- Diagnostics Support
-        DiagnosticError = { fg = colors.red, bold = true },
-        DiagnosticWarn  = { fg = colors.lyellow, bold = true },
-        DiagnosticHint  = { fg = colors.lcyan, bold = true },
-        DiagnosticInfo  = { fg = colors.lblue, bold = true },
+        DiagnosticError = { fg = colors.red, bold = false },
+        DiagnosticWarn  = { fg = colors.lyellow, bold = false },
+        DiagnosticHint  = { fg = colors.lcyan, bold = false },
+        DiagnosticInfo  = { fg = colors.lblue, bold = false },
 
         -- Gitsigns support
         GitsignsAdd     = { fg = colors.lgreen },
@@ -121,8 +121,8 @@ function M.setup(opts)
         GitsignsDelete  = { fg = colors.lred },
     }
 
-    for group, opts in pairs(highlights) do
-        vim.api.nvim_set_hl(0, group, opts)
+    for group, settings in pairs(highlights) do
+        vim.api.nvim_set_hl(0, group, settings)
     end
 
 end
