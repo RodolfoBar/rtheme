@@ -1,0 +1,23 @@
+{
+    "background": "#110F15",
+    "black": "#272133",
+    "blue": "#43D1FF",
+    "brightBlack": "#382F4A",
+    "brightBlue": "#86E8FF",
+    "brightCyan": "#4CFFE1",
+    "brightGreen": "#B9FF91",
+    "brightPurple": "#FB97FF",
+    "brightRed": "#FF8AAC",
+    "brightWhite": "#9E9CC0",
+    "brightYellow": "#FFD986",
+    "cursorColor": "#E8E7FF",
+    "cyan": "#00FFB2",
+    "foreground": "#E8E7FF",
+    "green": "#A6FF65",
+    "name": "rtheme",
+    "purple": "#A970FF",
+    "red": "#FF5D8A",
+    "selectionBackground": "#272133",
+    "white": "#645D87",
+    "yellow": "#FFA770"
+}
