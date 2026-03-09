@@ -1,8 +1,8 @@
 {
     "foreground":   "#eeebff",
     "background":   "#110f15",
-    "white":        "#3c314c",
-    "brightWhite":  "#4a405e",
+    "black":        "#241e2e",
+    "brightBlack":  "#706897",
     "red":          "#ff4f7f",
     "brightRed":    "#ff79a0",
     "green":        "#a6ff65",
@@ -15,8 +15,8 @@
     "brightPurple": "#fb97ff",
     "cyan":         "#36ffc3",
     "brightCyan":   "#6fffe7",
-    "black":        "#706897",
-    "brightBlack":  "#a7a5cb",
+    "white":        "#706897",
+    "brightWhite":  "#a7a5cb",
     "cursorColor":  "#eeebff",
     "name":         "rtheme",
     "selectionBackground": "#3c314c"
