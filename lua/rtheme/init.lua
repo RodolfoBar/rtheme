@@ -46,8 +46,8 @@ function M.setup(opts)
         String          = { fg = colors.lgreen },
         Statement       = { fg = colors.purple },
         Constant        = { fg = colors.yellow },
-        Operator        = { fg = colors.lcyan },
-        Delimiter       = { fg = colors.lcyan },
+        Operator        = { fg = colors.lblue },
+        Delimiter       = { fg = colors.lblue },
         Type            = { fg = colors.blue },
         Special         = { fg = colors.fg },
         Variable        = { fg = colors.fg },
@@ -62,7 +62,7 @@ function M.setup(opts)
 
         -- Treesitter support
         ["@variable"]                   = { fg = colors.fg },
-        ["@variable.parameter"]         = { fg = colors.lpurple },
+        ["@variable.parameter"]         = { fg = colors.cyan },
         ["@type.builtin"]               = { fg = colors.blue },
         ["@constructor"]                = { fg = colors.lblue },
         -- ["@type"]                       = { fg = colors.cyan },
