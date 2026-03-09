@@ -13,8 +13,8 @@ function M.setup(opts)
     local colors = {
         fg          = '#eeebff',
         bg          = '#110f15',
-        black       = '#272133',
-        lblack      = '#382f4a',
+        black       = '#241e2e',
+        lblack      = '#342d42',
         red         = '#ff4f7f',
         lred        = '#ff79a0',
         green       = '#a6ff65',
@@ -27,8 +27,8 @@ function M.setup(opts)
         lpurple     = '#fb97ff',
         cyan        = '#36ffc3',
         lcyan       = '#6fffe7',
-        white       = '#645d87',
-        lwhite      = '#9e9cc0',
+        white       = '#706897',
+        lwhite      = '#a7a5cb',
     }
 
     M.config = vim.tbl_deep_extend("force", {}, defaults, opts or {})
