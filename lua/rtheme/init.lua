@@ -139,6 +139,52 @@ function M.setup(opts)
         TelescopeResultsDiffChange  = { link = 'DiffChange' },
         TelescopeResultsDiffDelete  = { link = 'DiffDelete' },
 
+        -- render-markdown.nvim support
+        RenderMarkdownH1              = { fg = colors.blue, bold = true },
+        RenderMarkdownH2              = { fg = colors.purple, bold = true },
+        RenderMarkdownH3              = { fg = colors.yellow, bold = true },
+        RenderMarkdownH4              = { fg = colors.cyan, bold = true },
+        RenderMarkdownH5              = { fg = colors.green, bold = true },
+        RenderMarkdownH6              = { fg = colors.red, bold = true },
+        RenderMarkdownH1Bg            = { fg = colors.blue, bg = colors.black, bold = true },
+        RenderMarkdownH2Bg            = { fg = colors.purple, bg = colors.black, bold = true },
+        RenderMarkdownH3Bg            = { fg = colors.yellow, bg = colors.black, bold = true },
+        RenderMarkdownH4Bg            = { fg = colors.cyan, bg = colors.black, bold = true },
+        RenderMarkdownH5Bg            = { fg = colors.green, bg = colors.lblack, bold = true },
+        RenderMarkdownH6Bg            = { fg = colors.red, bg = colors.lblack, bold = true },
+        RenderMarkdownCode            = { fg = colors.fg, bg = colors.black },
+        RenderMarkdownCodeInfo        = { fg = colors.lpurple, bg = colors.black },
+        RenderMarkdownCodeBorder      = { fg = colors.lblack, bg = colors.black },
+        RenderMarkdownCodeFallback    = { fg = colors.fg, bg = colors.black },
+        RenderMarkdownCodeInline      = { fg = colors.lgreen, bg = colors.lblack },
+        RenderMarkdownQuote           = { fg = colors.white },
+        RenderMarkdownQuote1          = { fg = colors.blue },
+        RenderMarkdownQuote2          = { fg = colors.purple },
+        RenderMarkdownQuote3          = { fg = colors.yellow },
+        RenderMarkdownQuote4          = { fg = colors.cyan },
+        RenderMarkdownQuote5          = { fg = colors.green },
+        RenderMarkdownQuote6          = { fg = colors.red },
+        RenderMarkdownInlineHighlight = { fg = colors.lyellow, bg = colors.lblack, bold = true },
+        RenderMarkdownBullet          = { fg = colors.yellow },
+        RenderMarkdownDash            = { fg = colors.white },
+        RenderMarkdownSign            = { fg = colors.white, bg = colors.bg },
+        RenderMarkdownMath            = { fg = colors.lpurple },
+        RenderMarkdownIndent          = { fg = colors.lblack },
+        RenderMarkdownHtmlComment     = { fg = colors.white, italic = true },
+        RenderMarkdownLink            = { fg = colors.lblue, underline = true },
+        RenderMarkdownLinkTitle       = { fg = colors.blue, italic = true },
+        RenderMarkdownWikiLink        = { fg = colors.cyan, underline = true },
+        RenderMarkdownUnchecked       = { fg = colors.white },
+        RenderMarkdownChecked         = { fg = colors.lgreen, bold = true },
+        RenderMarkdownTodo            = { fg = colors.lyellow, italic = true },
+        RenderMarkdownTableHead       = { fg = colors.yellow, bold = true },
+        RenderMarkdownTableRow        = { fg = colors.fg },
+        RenderMarkdownSuccess         = { fg = colors.lgreen },
+        RenderMarkdownInfo            = { fg = colors.lblue },
+        RenderMarkdownHint            = { fg = colors.lcyan },
+        RenderMarkdownWarn            = { fg = colors.lyellow },
+        RenderMarkdownError           = { fg = colors.red },
+
         -- Syntax (existing)
         Comment         = { fg = colors.white },
         Function        = { fg = colors.lblue },
@@ -217,16 +263,16 @@ function M.setup(opts)
         vim.api.nvim_set_hl(0, group, settings)
     end
 
-    vim.g.terminal_color_0 = colors.black
-    vim.g.terminal_color_1 = colors.red
-    vim.g.terminal_color_2 = colors.green
-    vim.g.terminal_color_3 = colors.yellow
-    vim.g.terminal_color_4 = colors.blue
-    vim.g.terminal_color_5 = colors.purple
-    vim.g.terminal_color_6 = colors.cyan
-    vim.g.terminal_color_7 = colors.fg
-    vim.g.terminal_color_8 = colors.lblack
-    vim.g.terminal_color_9 = colors.lred
+    vim.g.terminal_color_0  = colors.black
+    vim.g.terminal_color_1  = colors.red
+    vim.g.terminal_color_2  = colors.green
+    vim.g.terminal_color_3  = colors.yellow
+    vim.g.terminal_color_4  = colors.blue
+    vim.g.terminal_color_5  = colors.purple
+    vim.g.terminal_color_6  = colors.cyan
+    vim.g.terminal_color_7  = colors.fg
+    vim.g.terminal_color_8  = colors.lblack
+    vim.g.terminal_color_9  = colors.lred
     vim.g.terminal_color_10 = colors.lgreen
     vim.g.terminal_color_11 = colors.lyellow
     vim.g.terminal_color_12 = colors.lblue
