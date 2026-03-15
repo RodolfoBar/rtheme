@@ -31,16 +31,116 @@ function M.setup(opts)
         lwhite      = '#a7a5cb',
     }
 
-    M.config = vim.tbl_deep_extend("force", {}, defaults, opts or {})
+    M.config = vim.tbl_deep_extend('force', {}, defaults, opts or {})
 
     if M.config.transparency then
-        colors.bg = "none"
+        colors.bg = 'none'
     end
 
+    local panel_bg = colors.black
+
     local highlights = {
+        -- Core editor UI
         Normal          = { fg = colors.fg, bg = colors.bg },
-        Comment         = { fg = colors.white },
+        NormalNC        = { fg = colors.fg, bg = colors.bg },
+        EndOfBuffer     = { fg = colors.black, bg = colors.bg },
+        SignColumn      = { fg = colors.fg, bg = colors.bg },
+        CursorLine      = { bg = colors.lblack },
+        CursorColumn    = { bg = colors.lblack },
+        ColorColumn     = { bg = colors.black },
+        CursorLineNr    = { fg = colors.yellow },
+        CursorLineSign  = { link = 'SignColumn' },
+        CursorLineFold  = { link = 'FoldColumn' },
+        LineNr          = { fg = colors.white },
+        LineNrAbove     = { link = 'LineNr' },
+        LineNrBelow     = { link = 'LineNr' },
+        Whitespace      = { fg = colors.lblack },
+        FoldColumn      = { fg = colors.white, bg = colors.bg },
+        Folded          = { fg = colors.white, bg = colors.black },
+        Conceal         = { fg = colors.white },
+        NonText         = { fg = colors.lblack },
+        SpecialKey      = { fg = colors.lblack },
+        Directory       = { fg = colors.blue },
         Visual          = { bg = colors.lblack },
+        MatchParen      = { fg = colors.yellow, bg = colors.lblack, bold = true },
+        WildMenu        = { fg = colors.black, bg = colors.lblue, bold = true },
+        QuickFixLine    = { bg = colors.black, bold = true },
+
+        -- Window/split/status/tab
+        VertSplit       = { fg = colors.lblack, bg = colors.bg },
+        WinSeparator    = { link = 'VertSplit' },
+        StatusLine      = { fg = colors.fg, bg = panel_bg },
+        StatusLineNC    = { fg = colors.white, bg = panel_bg },
+        TabLine         = { fg = colors.white, bg = panel_bg },
+        TabLineFill     = { fg = colors.white, bg = panel_bg },
+        TabLineSel      = { fg = colors.fg, bg = colors.lblack, bold = true },
+        WinBar          = { fg = colors.fg, bg = panel_bg },
+        WinBarNC        = { fg = colors.white, bg = panel_bg },
+
+        -- Popup/floating/completion
+        NormalFloat     = { fg = colors.fg, bg = panel_bg },
+        FloatBorder     = { fg = colors.lblack, bg = panel_bg },
+        FloatTitle      = { link = 'Title' },
+        Pmenu           = { fg = colors.fg, bg = panel_bg },
+        PmenuSel        = { fg = colors.black, bg = colors.lblue, bold = true },
+        PmenuSbar       = { bg = colors.lblack },
+        PmenuThumb      = { bg = colors.white },
+
+        -- Search/match/messages
+        Search          = { fg = colors.black, bg = colors.lyellow },
+        IncSearch       = { fg = colors.black, bg = colors.lblue, bold = true },
+        CurSearch       = { fg = colors.black, bg = colors.lcyan, bold = true },
+        Substitute      = { fg = colors.black, bg = colors.lpurple, bold = true },
+        ErrorMsg        = { fg = colors.red, bold = true },
+        WarningMsg      = { fg = colors.lyellow, bold = true },
+        MoreMsg         = { fg = colors.lgreen, bold = true },
+        ModeMsg         = { fg = colors.lblue, bold = true },
+        Question        = { fg = colors.cyan, bold = true },
+        MsgArea         = { fg = colors.fg, bg = colors.bg },
+        MsgSeparator    = { link = 'WinSeparator' },
+
+        -- Diff/spell
+        DiffAdd         = { fg = colors.lgreen, bg = colors.black },
+        DiffChange      = { fg = colors.lblue, bg = colors.black },
+        DiffDelete      = { fg = colors.lred, bg = colors.black },
+        DiffText        = { fg = colors.yellow, bg = colors.lblack, bold = true },
+        SpellBad        = { undercurl = true, sp = colors.red },
+        SpellCap        = { undercurl = true, sp = colors.lblue },
+        SpellLocal      = { undercurl = true, sp = colors.lcyan },
+        SpellRare       = { undercurl = true, sp = colors.purple },
+
+        -- Terminal
+        TermCursor      = { fg = colors.black, bg = colors.fg },
+        TermCursorNC    = { link = 'Cursor' },
+
+        -- Telescope support
+        TelescopeNormal             = { fg = colors.fg, bg = colors.bg },
+        TelescopeBorder             = { fg = colors.lblack, bg = colors.bg },
+        TelescopePromptNormal       = { fg = colors.fg, bg = colors.bg },
+        TelescopePromptBorder       = { fg = colors.lblue, bg = colors.bg },
+        TelescopeResultsNormal      = { link = 'TelescopeNormal' },
+        TelescopeResultsBorder      = { link = 'TelescopeBorder' },
+        TelescopePreviewNormal      = { link = 'TelescopeNormal' },
+        TelescopePreviewBorder      = { link = 'TelescopeBorder' },
+        TelescopeTitle              = { link = 'Title' },
+        TelescopePromptTitle        = { link = 'TelescopeTitle' },
+        TelescopeResultsTitle       = { link = 'TelescopeTitle' },
+        TelescopePreviewTitle       = { link = 'TelescopeTitle' },
+        TelescopePromptPrefix       = { fg = colors.lblue, bg = colors.bg, bold = true },
+        TelescopePromptCounter      = { fg = colors.white, bg = colors.bg },
+        TelescopeSelection          = { bg = colors.lblack },
+        TelescopeSelectionCaret     = { fg = colors.lblue, bg = colors.lblack },
+        TelescopeMatching           = { fg = colors.lyellow, bold = true },
+        TelescopeMultiSelection     = { link = 'TelescopeSelection' },
+        TelescopeMultiIcon          = { fg = colors.lblue },
+        TelescopePreviewLine        = { bg = colors.lblack },
+        TelescopePreviewMatch       = { fg = colors.lyellow, bold = true },
+        TelescopeResultsDiffAdd     = { link = 'DiffAdd' },
+        TelescopeResultsDiffChange  = { link = 'DiffChange' },
+        TelescopeResultsDiffDelete  = { link = 'DiffDelete' },
+
+        -- Syntax (existing)
+        Comment         = { fg = colors.white },
         Function        = { fg = colors.lblue },
         Identifier      = { fg = colors.fg },
         String          = { fg = colors.lgreen },
@@ -51,32 +151,25 @@ function M.setup(opts)
         Type            = { fg = colors.blue },
         Special         = { fg = colors.fg },
         Variable        = { fg = colors.fg },
-        CursorLine      = { bg = colors.lblack },
-        ColorColumn     = { bg = colors.black },
-        CursorLineNr    = { fg = colors.yellow },
-        LineNr          = { fg = colors.white },
-        Whitespace      = { fg = colors.lblack },
         Title           = { fg = colors.yellow },
         PreProc         = { fg = colors.lpurple },
 
+        -- Treesitter support (existing)
+        ['@variable']                   = { fg = colors.fg },
+        ['@variable.parameter']         = { fg = colors.cyan },
+        ['@type.builtin']               = { fg = colors.blue },
+        ['@constructor']                = { fg = colors.lblue },
+        -- ['@type']                       = { fg = colors.cyan },
+        -- ['@type.builtin']               = { fg = colors.cyan },
 
-        -- Treesitter support
-        ["@variable"]                   = { fg = colors.fg },
-        ["@variable.parameter"]         = { fg = colors.cyan },
-        ["@type.builtin"]               = { fg = colors.blue },
-        ["@constructor"]                = { fg = colors.lblue },
-        -- ["@type"]                       = { fg = colors.cyan },
-        -- ["@type.builtin"]               = { fg = colors.cyan },
-
-        -- Treesitter Markdown support
-        ["@markup.heading.1.markdown"]  = { fg = colors.blue, bold = true, },
-        ["@markup.heading.2.markdown"]  = { fg = colors.purple, bold = true, },
-        ["@markup.heading.3.markdown"]  = { fg = colors.yellow, bold = true, },
-        ["@markup.heading.4.markdown"]  = { fg = colors.cyan, bold = true, },
-        ["@markup.heading.5.markdown"]  = { fg = colors.green, bold = true, },
-        ["@markup.heading.6.markdown"]  = { fg = colors.red, bold = true, },
-
-        ["@markup.list.markdown"] = { fg = colors.yellow },
+        -- Treesitter Markdown support (existing)
+        ['@markup.heading.1.markdown']  = { fg = colors.blue, bold = true, },
+        ['@markup.heading.2.markdown']  = { fg = colors.purple, bold = true, },
+        ['@markup.heading.3.markdown']  = { fg = colors.yellow, bold = true, },
+        ['@markup.heading.4.markdown']  = { fg = colors.cyan, bold = true, },
+        ['@markup.heading.5.markdown']  = { fg = colors.green, bold = true, },
+        ['@markup.heading.6.markdown']  = { fg = colors.red, bold = true, },
+        ['@markup.list.markdown']       = { fg = colors.yellow },
 
         -- Todo support
         -- NOTE: THING
@@ -86,7 +179,6 @@ function M.setup(opts)
         -- HACK: THING
         -- PERF: THING
         -- TEST: THING
-
         TodoBgNOTE      = { bg = colors.lblue, fg = colors.black, bold = true, italic = true },
         TodoFgNOTE      = { fg = colors.lblue, italic = true },
         TodoSignNOTE    = { fg = colors.lblue, italic = true },
@@ -109,7 +201,7 @@ function M.setup(opts)
         TodoFgTEST      = { fg = colors.lwhite, italic = true },
         TodoSignTEST    = { fg = colors.lwhite, italic = true },
 
-        -- Diagnostics Support
+        -- Diagnostics support (existing)
         DiagnosticError = { fg = colors.red, bold = false },
         DiagnosticWarn  = { fg = colors.lyellow, bold = false },
         DiagnosticHint  = { fg = colors.lcyan, bold = false },
@@ -124,6 +216,23 @@ function M.setup(opts)
     for group, settings in pairs(highlights) do
         vim.api.nvim_set_hl(0, group, settings)
     end
+
+    vim.g.terminal_color_0 = colors.black
+    vim.g.terminal_color_1 = colors.red
+    vim.g.terminal_color_2 = colors.green
+    vim.g.terminal_color_3 = colors.yellow
+    vim.g.terminal_color_4 = colors.blue
+    vim.g.terminal_color_5 = colors.purple
+    vim.g.terminal_color_6 = colors.cyan
+    vim.g.terminal_color_7 = colors.fg
+    vim.g.terminal_color_8 = colors.lblack
+    vim.g.terminal_color_9 = colors.lred
+    vim.g.terminal_color_10 = colors.lgreen
+    vim.g.terminal_color_11 = colors.lyellow
+    vim.g.terminal_color_12 = colors.lblue
+    vim.g.terminal_color_13 = colors.lpurple
+    vim.g.terminal_color_14 = colors.lcyan
+    vim.g.terminal_color_15 = colors.lwhite
 
 end
 
