@@ -17,7 +17,7 @@
 "variable" = { fg = "fg" }
 "variable.builtin" = { fg = "cyan" }
 "variable.parameter" = { fg = "cyan" }
-"variable.other.member" = { fg = "lpurple" }
+"variable.other.member" = { fg = "fg" }
 "label" = { fg = "purple" }
 "punctuation" = { fg = "lblue" }
 "punctuation.delimiter" = { fg = "lblue" }
