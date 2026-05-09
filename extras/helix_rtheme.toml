@@ -2,7 +2,7 @@
 # Based on the rtheme Neovim theme
 # https://github.com/rondDev/rtheme
 
-# Author: rondDev
+# Author: RodolfoBar
 
 "attribute" = { fg = "yellow" }
 "type" = { fg = "blue" }
@@ -21,7 +21,7 @@
 "label" = { fg = "purple" }
 "punctuation" = { fg = "lblue" }
 "punctuation.delimiter" = { fg = "lblue" }
-"punctuation.bracket" = { fg = "fg" }
+"punctuation.bracket" = { fg = "lblue" }
 "keyword" = { fg = "purple" }
 "keyword.control" = { fg = "purple" }
 "keyword.control.import" = { fg = "purple" }
@@ -99,10 +99,10 @@
 "ui.picker.header.column" = { fg = "lblue", bg = "bg" }
 "ui.picker.header.column.active" = { fg = "lblue", bg = "bg", modifiers = ["bold"] }
 
-"diagnostic.error" = { fg = "red" }
-"diagnostic.warning" = { fg = "lyellow" }
-"diagnostic.info" = { fg = "lblue" }
-"diagnostic.hint" = { fg = "lcyan" }
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "lyellow", style = "curl" } }
+"diagnostic.info" = { underline = { color = "lblue", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "lcyan", style = "curl" } }
 
 "error" = { fg = "red", modifiers = ["bold"] }
 "warning" = { fg = "lyellow", modifiers = ["bold"] }
