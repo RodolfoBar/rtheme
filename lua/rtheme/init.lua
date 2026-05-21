@@ -51,6 +51,8 @@ function M.setup(opts)
     CursorLineNr    = { fg = colors.yellow },
     CursorLineSign  = { link = 'SignColumn' },
     CursorLineFold  = { link = 'FoldColumn' },
+    Cursor          = { fg = colors.bg, bg = colors.cyan },
+    Cursor2         = { fg = colors.bg, bg = colors.cyan },
     LineNr          = { fg = colors.white },
     LineNrAbove     = { link = 'LineNr' },
     LineNrBelow     = { link = 'LineNr' },
