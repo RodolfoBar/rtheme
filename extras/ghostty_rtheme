@@ -1,0 +1,32 @@
+## name: rtheme
+## license: MIT
+## author: Rodolfo Barcelli Jo
+## upstream: https://github.com/rodolfobar/rtheme
+
+
+# normal
+palette = 0=#241e2e
+palette = 1=#ff4f7f
+palette = 2=#a6ff65
+palette = 3=#ffa770
+palette = 4=#6daeff
+palette = 5=#b483ff
+palette = 6=#36ffc3
+palette = 7=#706897
+
+# bright
+palette = 8=#342d42
+palette = 9=#ff79a0
+palette = 10=#b9ff91
+palette = 11=#ffd986
+palette = 12=#76ddff
+palette = 13=#fb97ff
+palette = 14=#6fffe7
+palette = 15=#a7a5cb
+
+background = #110f15
+foreground = #eeebff
+cursor-color = #eeebff
+cursor-text = #110f15
+selection-background = #342d42
+selection-foreground = #eeebff
