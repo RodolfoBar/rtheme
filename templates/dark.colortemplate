@@ -1,0 +1,137 @@
+Full name:      RTheme
+Short name:     rtheme
+Author:         Rodolfo Barcelli Jo
+URL:            https://github.com/rodolfobar/rtheme
+Description:    A minimal dark theme
+License:        MIT
+Options:        backend=viml
+
+Environments:   gui 256 16 8 0
+Background:     dark
+
+; Color pallette
+Color:     norm_fg #eeebff ~
+Color:     norm_bg #110f15 ~
+Color:     black   #241e2e ~
+Color:     lblack  #342d42 ~
+Color:     red     #ff4f7f ~
+Color:     lred    #ff79a0 ~
+Color:     green   #a6ff65 ~
+Color:     lgreen  #b9ff91 ~
+Color:     yellow  #ffa770 ~
+Color:     lyellow #ffd986 ~
+Color:     blue    #6daeff ~
+Color:     lblue   #76ddff ~
+Color:     purple  #b483ff ~
+Color:     lpurple #fb97ff ~
+Color:     cyan    #36ffc3 ~
+Color:     lcyan   #6fffe7 ~
+Color:     white   #706897 ~
+Color:     lwhite  #a7a5cb ~
+
+Term Colors: black  red  green  yellow  blue  purple  cyan  white
+             lblack lred lgreen lyellow lblue lpurple lcyan lwhite
+
+#const transp_bg = get(g:, '@prefix_transp_bg', 0)
+
+; Highlight group definitions
+Terminal                   norm_fg      norm_bg
+   /gui/256/8 +transp_bg 1 omit         none        s=omit
+Normal                     norm_fg      norm_bg
+   /gui/256/8 +transp_bg 1 omit         none        s=omit
+NormalNC                   norm_fg      norm_bg
+   /gui/256/8 +transp_bg 1 omit         none        s=omit
+EndOfBuffer                black        norm_bg
+   /gui/256/8 +transp_bg 1 omit         none        s=omit
+SignColumn                 norm_fg      norm_bg
+   /gui/256/8 +transp_bg 1 omit         none        s=omit
+ColorColumn                none         black
+CursorLineNr               yellow       none
+   /gui/256/8 +transp_bg 1 omit         none        s=omit
+LineNr                     white        none
+   /gui/256/8 +transp_bg 1 omit         none        s=omit
+Whitespace                 lblack       none
+FoldColumn                 white        norm_bg
+   /gui/256/8 +transp_bg 1 omit         none        s=omit
+Folded                     white        norm_bg
+Conceal                    white        none
+NonText                    lblack       none
+SpecialKey                 lblack       none
+Directory                  blue         none
+Visual                     none         lblack
+MatchParen                 yellow       lblack              bold
+WildMenu                   black        lblue               bold
+QuickFixLine               none         black               bold
+VertSplit                  lblack       norm_bg
+   /gui/256/8 +transp_bg 1 omit         none        s=omit
+StatusLine                 norm_fg      black
+   /gui/256/8 +transp_bg 1 omit         none        s=omit
+StatusLineNC               white        black
+   /gui/256/8 +transp_bg 1 omit         none        s=omit
+TabLine                    white        black
+   /gui/256/8 +transp_bg 1 omit         none        s=omit
+TabLineFill                white        black
+   /gui/256/8 +transp_bg 1 omit         none        s=omit
+TabLineSel                 norm_fg      lblack              bold
+   /gui/256/8 +transp_bg 1 omit         none        s=omit
+WinBar                     norm_fg      black
+   /gui/256/8 +transp_bg 1 omit         none        s=omit
+WinBarNC                   white        black
+   /gui/256/8 +transp_bg 1 omit         none        s=omit
+
+NormalFloat                norm_fg      black
+   /gui/256/8 +transp_bg 1 omit         none        s=omit
+FloatBorder                lblack       black
+   /gui/256/8 +transp_bg 1 omit         none        s=omit
+Pmenu                      norm_fg      black
+PmenuSel                   black        lblue               bold
+PmenuSbar                  none         lblack
+PmenuThumb                 none         white
+
+Search                     black        lyellow
+IncSearch                  black        lblue               bold
+CurSearch                  black        lcyan               bold
+Substitute                 black        lpurple             bold
+ErrorMsg                   red          none                bold
+WarningMsg                 lyellow      none                bold
+MoreMsg                    lgreen       none                bold
+ModeMsg                    lblue        none                bold
+Question                   cyan         none                bold
+MsgArea                    norm_fg      norm_bg
+   /gui/256/8 +transp_bg 1 omit         none        s=omit
+
+DiffAdd                    lgreen       black
+DiffChange                 lblue        black
+DiffDelete                 lred         black
+DiffText                   yellow       lblack              bold
+SpellBad                   none         none      s=red     undercurl
+SpellCap                   none         none      s=lblue   undercurl
+SpellLocal                 none         none      s=lcyan   undercurl
+SpellRare                  none         none      s=purple  undercurl
+
+TermCursor                 black        norm_fg
+
+Comment                    white        none
+Function                   lblue        none
+Identifier                 fg           none
+String                     lgreen       none
+Statement                  purple       none
+Constant                   yellow       none
+Operator                   lblue        none
+Delimiter                  lblue        none
+Type                       blue         none
+Special                    fg           none
+Variable                   fg           none
+Title                      yellow       none
+PreProc                    lpurple      none
+
+FloatTitle       -> Title
+CursorLineSign   -> SignColumn
+CursorLineFold   -> FoldColumn
+LineNrAbove      -> LineNr
+LineNrBelow      -> LineNr
+WinSeparator     -> VertSplit
+CursorLine       -> Visual
+CursorColumn     -> Visual
+MsgSeparator     -> WinSeparator
+TermCursorNC     -> Cursor
