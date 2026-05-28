@@ -86,6 +86,7 @@ hi TabLineSel guifg=#eeebff guibg=#342d42 guisp=NONE gui=bold ctermfg=189 ctermb
 hi TermCursor guifg=#241e2e guibg=#eeebff guisp=NONE gui=NONE ctermfg=234 ctermbg=189 cterm=NONE term=NONE
 hi Terminal guifg=#eeebff guibg=#110f15 guisp=NONE gui=NONE ctermfg=189 ctermbg=233 cterm=NONE term=NONE
 hi Title guifg=#ffa770 guibg=NONE guisp=NONE gui=NONE ctermfg=216 ctermbg=NONE cterm=NONE term=NONE
+hi Todo guifg=#ffa770 guibg=NONE guisp=NONE gui=NONE ctermfg=216 ctermbg=NONE cterm=NONE term=NONE
 hi Type guifg=#6daeff guibg=NONE guisp=NONE gui=NONE ctermfg=75 ctermbg=NONE cterm=NONE term=NONE
 hi Variable guifg=fg guibg=NONE guisp=NONE gui=NONE ctermfg=fg ctermbg=NONE cterm=NONE term=NONE
 hi VertSplit guifg=#342d42 guibg=#110f15 guisp=NONE gui=NONE ctermfg=236 ctermbg=233 cterm=NONE term=NONE
@@ -202,6 +203,7 @@ if s:t_Co >= 16
   hi TermCursor ctermfg=NONE ctermbg=NONE cterm=NONE
   hi Terminal ctermfg=NONE ctermbg=NONE cterm=NONE
   hi Title ctermfg=NONE ctermbg=NONE cterm=NONE
+  hi Todo ctermfg=NONE ctermbg=NONE cterm=NONE
   hi Type ctermfg=NONE ctermbg=NONE cterm=NONE
   hi Variable ctermfg=fg ctermbg=NONE cterm=NONE
   hi VertSplit ctermfg=NONE ctermbg=NONE cterm=NONE
@@ -271,6 +273,7 @@ if s:t_Co >= 8
   hi TermCursor ctermfg=NONE ctermbg=NONE cterm=NONE
   hi Terminal ctermfg=NONE ctermbg=NONE cterm=NONE
   hi Title ctermfg=NONE ctermbg=NONE cterm=NONE
+  hi Todo ctermfg=NONE ctermbg=NONE cterm=NONE
   hi Type ctermfg=NONE ctermbg=NONE cterm=NONE
   hi Variable ctermfg=fg ctermbg=NONE cterm=NONE
   hi VertSplit ctermfg=NONE ctermbg=NONE cterm=NONE

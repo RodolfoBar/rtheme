@@ -124,6 +124,7 @@ Special                    fg           none
 Variable                   fg           none
 Title                      yellow       none
 PreProc                    lpurple      none
+Todo                       yellow       none
 
 FloatTitle       -> Title
 CursorLineSign   -> SignColumn
