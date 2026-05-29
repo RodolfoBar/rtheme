@@ -124,7 +124,10 @@ Special                    fg           none
 Variable                   fg           none
 Title                      yellow       none
 PreProc                    lpurple      none
-Todo                       yellow       none
+MyTodo                     yellow       none
+MyNote                     norm_fg      none
+MyWarn                     lyellow      none
+MyFix                      red          none
 
 FloatTitle       -> Title
 CursorLineSign   -> SignColumn

@@ -56,6 +56,10 @@ hi MatchParen guifg=#ffa770 guibg=#342d42 guisp=NONE gui=bold ctermfg=216 ctermb
 hi ModeMsg guifg=#76ddff guibg=NONE guisp=NONE gui=bold ctermfg=81 ctermbg=NONE cterm=bold term=bold
 hi MoreMsg guifg=#b9ff91 guibg=NONE guisp=NONE gui=bold ctermfg=156 ctermbg=NONE cterm=bold term=bold
 hi MsgArea guifg=#eeebff guibg=#110f15 guisp=NONE gui=NONE ctermfg=189 ctermbg=233 cterm=NONE term=NONE
+hi MyTodo guifg=#ffa770 guibg=NONE guisp=NONE gui=bold ctermfg=216 ctermbg=NONE cterm=bold term=bold
+hi MyNote guifg=#eeebff guibg=NONE guisp=NONE gui=bold ctermfg=189 ctermbg=NONE cterm=bold term=bold
+hi MyWarn guifg=#ffd986 guibg=NONE guisp=NONE gui=bold ctermfg=222 ctermbg=NONE cterm=bold term=bold
+hi MyFix guifg=#ff4f7f guibg=NONE guisp=NONE gui=bold ctermfg=204 ctermbg=NONE cterm=bold term=bold
 hi NonText guifg=#342d42 guibg=NONE guisp=NONE gui=NONE ctermfg=236 ctermbg=NONE cterm=NONE term=NONE
 hi NormalFloat guifg=#eeebff guibg=#241e2e guisp=NONE gui=NONE ctermfg=189 ctermbg=234 cterm=NONE term=NONE
 hi NormalNC guifg=#eeebff guibg=#110f15 guisp=NONE gui=NONE ctermfg=189 ctermbg=233 cterm=NONE term=NONE
