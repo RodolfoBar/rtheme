@@ -1,0 +1,44 @@
+# rtheme Alacritty theme
+# license: MIT
+# author: Rodolfo Barcelli Jo
+# upstream: https://github.com/rodolfobar/rtheme
+
+[colors.primary]
+background = "#110f15"
+foreground = "#eeebff"
+
+[colors.cursor]
+text = "#110f15"
+cursor = "#a7a5cb"
+
+[colors.selection]
+text = "#eeebff"
+background = "#342d42"
+
+[colors.normal]
+black = "#241e2e"
+red = "#ff4f7f"
+green = "#a6ff65"
+yellow = "#ffa770"
+blue = "#6daeff"
+magenta = "#b483ff"
+cyan = "#36ffc3"
+white = "#706897"
+
+[colors.bright]
+black = "#342d42"
+red = "#ff79a0"
+green = "#b9ff91"
+yellow = "#ffd986"
+blue = "#76ddff"
+magenta = "#fb97ff"
+cyan = "#6fffe7"
+white = "#a7a5cb"
+
+[[colors.indexed_colors]]
+index = 16
+color = "#ffa770"
+
+[[colors.indexed_colors]]
+index = 17
+color = "#ff4f7f"

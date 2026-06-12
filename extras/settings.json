@@ -17,7 +17,7 @@
     "brightCyan":   "#6fffe7",
     "white":        "#706897",
     "brightWhite":  "#a7a5cb",
-    "cursorColor":  "#eeebff",
+    "cursorColor":  "#a7a5cb",
     "name":         "rtheme",
     "selectionBackground": "#3c314c"
 }
