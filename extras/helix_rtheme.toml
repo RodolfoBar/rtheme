@@ -1,130 +1,130 @@
 # rtheme - A dark theme for Helix
 # Based on the rtheme Neovim theme
-# https://github.com/rodolfobar/rtheme
+# https://github.com/RodolfoBar/rtheme
 
-# Author: RodolfoBar
+# Author: Rodolfo Barcelli Jo
 
-"attribute" = { fg = "yellow" }
-"type" = { fg = "blue" }
-"constructor" = { fg = "lblue" }
-"constant" = { fg = "yellow" }
-"constant.builtin" = { fg = "yellow" }
-"constant.character" = { fg = "lgreen" }
-"constant.character.escape" = { fg = "lpurple" }
-"string" = { fg = "lgreen" }
-"string.regexp" = { fg = "lpurple" }
-"comment" = { fg = "white" }
-"variable" = { fg = "fg" }
-"variable.builtin" = { fg = "cyan" }
-"variable.parameter" = { fg = "cyan" }
-"variable.other.member" = { fg = "fg" }
-"label" = { fg = "purple" }
-"punctuation" = { fg = "lblue" }
-"punctuation.delimiter" = { fg = "lblue" }
-"punctuation.bracket" = { fg = "lblue" }
-"keyword" = { fg = "purple" }
-"keyword.control" = { fg = "purple" }
-"keyword.control.import" = { fg = "purple" }
-"keyword.control.return" = { fg = "purple" }
-"keyword.directive" = { fg = "lpurple" }
-"keyword.operator" = { fg = "purple" }
-"operator" = { fg = "lblue" }
-"function" = { fg = "lblue" }
-"function.builtin" = { fg = "lblue" }
-"function.macro" = { fg = "lpurple" }
-"tag" = { fg = "red" }
-"special" = { fg = "lpurple" }
-"namespace" = { fg = "yellow" }
+"attribute"                       = { fg = "yellow" }
+"type"                            = { fg = "blue" }
+"constructor"                     = { fg = "lblue" }
+"constant"                        = { fg = "yellow" }
+"constant.builtin"                = { fg = "yellow" }
+"constant.character"              = { fg = "lgreen" }
+"constant.character.escape"       = { fg = "lpurple" }
+"string"                          = { fg = "lgreen" }
+"string.regexp"                   = { fg = "lpurple" }
+"comment"                         = { fg = "white" }
+"variable"                        = { fg = "fg" }
+"variable.builtin"                = { fg = "cyan" }
+"variable.parameter"              = { fg = "cyan" }
+"variable.other.member"           = { fg = "fg" }
+"label"                           = { fg = "purple" }
+"punctuation"                     = { fg = "lblue" }
+"punctuation.delimiter"           = { fg = "lblue" }
+"punctuation.bracket"             = { fg = "lblue" }
+"keyword"                         = { fg = "purple" }
+"keyword.control"                 = { fg = "purple" }
+"keyword.control.import"          = { fg = "purple" }
+"keyword.control.return"          = { fg = "purple" }
+"keyword.directive"               = { fg = "lpurple" }
+"keyword.operator"                = { fg = "purple" }
+"operator"                        = { fg = "lblue" }
+"function"                        = { fg = "lblue" }
+"function.builtin"                = { fg = "lblue" }
+"function.macro"                  = { fg = "lpurple" }
+"tag"                             = { fg = "red" }
+"special"                         = { fg = "lpurple" }
+"namespace"                       = { fg = "yellow" }
 
-"markup.heading.1" = { fg = "blue", modifiers = ["bold"] }
-"markup.heading.2" = { fg = "purple", modifiers = ["bold"] }
-"markup.heading.3" = { fg = "yellow", modifiers = ["bold"] }
-"markup.heading.4" = { fg = "cyan", modifiers = ["bold"] }
-"markup.heading.5" = { fg = "green", modifiers = ["bold"] }
-"markup.heading.6" = { fg = "red", modifiers = ["bold"] }
-"markup.list" = { fg = "yellow" }
-"markup.bold" = { modifiers = ["bold"] }
-"markup.italic" = { modifiers = ["italic"] }
-"markul.strikethrough" = { modifiers = ["crossed_out"] }
-"markup.link.url" = { fg = "lblue", modifiers = ["underlined"] }
-"markup.link.label" = { fg = "lblue", modifiers = ["underlined", "italic"] }
-"markup.link.text" = { fg = "lblue" }
-"markup.quote" = { fg = "white" }
-"markup.raw" = { fg = "lgreen", bg = "black" }
-"markup.normal" = { fg = "fg" }
+"markup.heading.1"                = { fg = "blue", modifiers = ["bold"] }
+"markup.heading.2"                = { fg = "purple", modifiers = ["bold"] }
+"markup.heading.3"                = { fg = "yellow", modifiers = ["bold"] }
+"markup.heading.4"                = { fg = "cyan", modifiers = ["bold"] }
+"markup.heading.5"                = { fg = "green", modifiers = ["bold"] }
+"markup.heading.6"                = { fg = "red", modifiers = ["bold"] }
+"markup.list"                     = { fg = "yellow" }
+"markup.bold"                     = { modifiers = ["bold"] }
+"markup.italic"                   = { modifiers = ["italic"] }
+"markul.strikethrough"            = { modifiers = ["crossed_out"] }
+"markup.link.url"                 = { fg = "lblue", modifiers = ["underlined"] }
+"markup.link.label"               = { fg = "lblue", modifiers = ["underlined", "italic"] }
+"markup.link.text"                = { fg = "lblue" }
+"markup.quote"                    = { fg = "white" }
+"markup.raw"                      = { fg = "lgreen", bg = "black" }
+"markup.normal"                   = { fg = "fg" }
 
-"diff.plus" = { fg = "lgreen", bg = "black" }
-"diff.minus" = { fg = "lred", bg = "black" }
-"diff.delta" = { fg = "lblue", bg = "black" }
-"diff.delta.moved" = { fg = "yellow", bg = "lblack" }
+"diff.plus"                       = { fg = "lgreen", bg = "black" }
+"diff.minus"                      = { fg = "lred", bg = "black" }
+"diff.delta"                      = { fg = "lblue", bg = "black" }
+"diff.delta.moved"                = { fg = "yellow", bg = "lblack" }
 
-"ui.background" = { fg = "fg", bg = "bg" }
-"ui.background.separator" = { fg = "lblack", bg = "bg" }
-"ui.cursor" = { fg = "black", bg = "fg" }
-"ui.cursor.match" = { fg = "yellow", bg = "lblack", modifiers = ["bold"] }
-"ui.cursor.primary" = { fg = "black", bg = "fg" }
-"ui.cursorline.primary" = { bg = "lblack" }
-"ui.cursorline.secondary" = { bg = "lblack" }
-"ui.linenr" = { fg = "white" }
-"ui.linenr.selected" = { fg = "yellow" }
-"ui.statusline" = { fg = "fg", bg = "black" }
-"ui.statusline.inactive" = { fg = "white", bg = "black" }
-"ui.statusline.normal" = { fg = "black", bg = "lblue", modifiers = ["bold"] }
-"ui.statusline.insert" = { fg = "black", bg = "lgreen", modifiers = ["bold"] }
-"ui.statusline.select" = { fg = "black", bg = "lpurple", modifiers = ["bold"] }
-"ui.bufferline" = { fg = "white", bg = "black" }
-"ui.bufferline.active" = { fg = "fg", bg = "lblack", modifiers = ["bold"] }
-"ui.popup" = { fg = "fg", bg = "black" }
-"ui.popup.info" = { fg = "fg", bg = "black" }
-"ui.window" = { fg = "lblack", bg = "bg" }
-"ui.help" = { fg = "fg", bg = "black" }
-"ui.text" = { fg = "fg" }
-"ui.text.focus" = { fg = "fg", bg = "lblack" }
-"ui.text.inactive" = { fg = "white" }
-"ui.text.info" = { fg = "fg" }
-"ui.virtual.ruler" = { bg = "black" }
-"ui.virtual.whitespace" = { fg = "lblack" }
-"ui.virtual.indent-guide" = { fg = "lblack" }
-"ui.virtual.inlay-hint" = { fg = "white", bg = "bg" }
+"ui.background"                   = { fg = "fg", bg = "bg" }
+"ui.background.separator"         = { fg = "lblack", bg = "bg" }
+"ui.cursor"                       = { fg = "black", bg = "lwhite" }
+"ui.cursor.match"                 = { fg = "yellow", bg = "lblack", modifiers = ["bold"] }
+"ui.cursor.primary"               = { fg = "black", bg = "lwhite" }
+"ui.cursorline.primary"           = { bg = "black" }
+"ui.cursorline.secondary"         = { bg = "black" }
+"ui.linenr"                       = { fg = "white" }
+"ui.linenr.selected"              = { fg = "yellow" }
+"ui.statusline"                   = { fg = "fg", bg = "black" }
+"ui.statusline.inactive"          = { fg = "white", bg = "black" }
+"ui.statusline.normal"            = { fg = "black", bg = "lblue", modifiers = ["bold"] }
+"ui.statusline.insert"            = { fg = "black", bg = "lgreen", modifiers = ["bold"] }
+"ui.statusline.select"            = { fg = "black", bg = "lpurple", modifiers = ["bold"] }
+"ui.bufferline"                   = { fg = "white", bg = "black" }
+"ui.bufferline.active"            = { fg = "fg", bg = "lblack", modifiers = ["bold"] }
+"ui.popup"                        = { fg = "fg", bg = "black" }
+"ui.popup.info"                   = { fg = "fg", bg = "black" }
+"ui.window"                       = { fg = "lblack", bg = "bg" }
+"ui.help"                         = { fg = "fg", bg = "black" }
+"ui.text"                         = { fg = "fg" }
+"ui.text.focus"                   = { fg = "fg", bg = "lblack" }
+"ui.text.inactive"                = { fg = "white" }
+"ui.text.info"                    = { fg = "fg" }
+"ui.virtual.ruler"                = { bg = "black" }
+"ui.virtual.whitespace"           = { fg = "lblack" }
+"ui.virtual.indent-guide"         = { fg = "lblack" }
+"ui.virtual.inlay-hint"           = { fg = "white", bg = "bg" }
 "ui.virtual.inlay-hint.parameter" = { fg = "white", bg = "bg", modifiers = ["italic"] }
-"ui.virtual.inlay-hint.type" = { fg = "white", bg = "bg", modifiers = ["italic"] }
-"ui.virtual.wrap" = { fg = "lblack" }
-"ui.menu" = { fg = "fg", bg = "black" }
-"ui.menu.selected" = { fg = "black", bg = "lblue", modifiers = ["bold"] }
-"ui.menu.scroll" = { fg = "white", bg = "lblack" }
-"ui.selection" = { bg = "lblack" }
-"ui.selection.primary" = { bg = "lblack" }
-"ui.highlight" = { bg = "lblack" }
-"ui.picker.header.preview" = { fg = "lblue", bg = "bg" }
-"ui.picker.header.column" = { fg = "lblue", bg = "bg" }
-"ui.picker.header.column.active" = { fg = "lblue", bg = "bg", modifiers = ["bold"] }
+"ui.virtual.inlay-hint.type"      = { fg = "white", bg = "bg", modifiers = ["italic"] }
+"ui.virtual.wrap"                 = { fg = "lblack" }
+"ui.menu"                         = { fg = "fg", bg = "black" }
+"ui.menu.selected"                = { fg = "black", bg = "lblue", modifiers = ["bold"] }
+"ui.menu.scroll"                  = { fg = "white", bg = "lblack" }
+"ui.selection"                    = { bg = "lblack" }
+"ui.selection.primary"            = { bg = "lblack" }
+"ui.highlight"                    = { bg = "lblack" }
+"ui.picker.header.preview"        = { fg = "lblue", bg = "bg" }
+"ui.picker.header.column"         = { fg = "lblue", bg = "bg" }
+"ui.picker.header.column.active"  = { fg = "lblue", bg = "bg", modifiers = ["bold"] }
 
-"diagnostic.error" = { underline = { color = "red", style = "curl" } }
-"diagnostic.warning" = { underline = { color = "lyellow", style = "curl" } }
-"diagnostic.info" = { underline = { color = "lblue", style = "curl" } }
-"diagnostic.hint" = { underline = { color = "lcyan", style = "curl" } }
+"diagnostic.error"                = { underline = { color = "red", style = "curl" } }
+"diagnostic.warning"              = { underline = { color = "lyellow", style = "curl" } }
+"diagnostic.info"                 = { underline = { color = "lblue", style = "curl" } }
+"diagnostic.hint"                 = { underline = { color = "lcyan", style = "curl" } }
 
-"error" = { fg = "red", modifiers = ["bold"] }
-"warning" = { fg = "lyellow", modifiers = ["bold"] }
-"info" = { fg = "lblue", modifiers = ["bold"] }
-"hint" = { fg = "lcyan", modifiers = ["bold"] }
+"error"                           = { fg = "red", modifiers = ["bold"] }
+"warning"                         = { fg = "lyellow", modifiers = ["bold"] }
+"info"                            = { fg = "lblue", modifiers = ["bold"] }
+"hint"                            = { fg = "lcyan", modifiers = ["bold"] }
 
 [palette]
-fg = "#eeebff"
-bg = "#110f15"
-black = "#241e2e"
-lblack = "#342d42"
-red = "#ff4f7f"
-lred = "#ff79a0"
-green = "#a6ff65"
-lgreen = "#b9ff91"
-yellow = "#ffa770"
-lyellow = "#ffd986"
-blue = "#6daeff"
-lblue = "#76ddff"
-purple = "#b483ff"
-lpurple = "#fb97ff"
-cyan = "#36ffc3"
-lcyan = "#6fffe7"
-white = "#706897"
-lwhite = "#a7a5cb"
+fg                                = "#eeebff"
+bg                                = "#110f15"
+black                             = "#241e2e"
+lblack                            = "#342d42"
+red                               = "#ff4f7f"
+lred                              = "#ff79a0"
+green                             = "#a6ff65"
+lgreen                            = "#b9ff91"
+yellow                            = "#ffa770"
+lyellow                           = "#ffd986"
+blue                              = "#6daeff"
+lblue                             = "#76ddff"
+purple                            = "#b483ff"
+lpurple                           = "#fb97ff"
+cyan                              = "#36ffc3"
+lcyan                             = "#6fffe7"
+white                             = "#706897"
+lwhite                            = "#a7a5cb"
