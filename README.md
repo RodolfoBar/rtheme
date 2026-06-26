@@ -1,5 +1,7 @@
 # rtheme (Rodolfo Theme)
 
+![screenshot-1](./docs/images/screenshot-1.png)
+
 This is my personal Neovim theme. It is heavily inspired by "rose pine" and "tokyo night" but all the colors were chosen myself. 
 
 I decided to do this as I felt there were too many highlight groups that I felt overwhelmed when looking at code, and it was too much work to fix existing color schemes.
